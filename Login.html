@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="header">
+        <img src="assets/EK logo.png" alt="EuroKids Logo" class="logo">
+        <h1>EUROKIDS PRE-SCHOOL MANAGEMENT SYSTEM</h1>
+    </div>
+    <div class="login-container">
+        <div class="login-box">
+            <img src="assets/bunny_login.png" alt="EuroKids Pre-School" class="login-logo">
+            <p>Enter your username and password.</p>
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="text" id="username" placeholder="Username" value="sapna.deepak">
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password">
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+            <p id="errorMessage" class="error-message"></p>
+            <a href="#" class="forgot-password" id="forgotPassword" style="display: none;">Forgot Password</a>
+        </div>
+    </div>
+    <footer>
+        <p>2013 © EuroKids International Pvt. Ltd.</p>
+    </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script src="login.js"></script>
+</body>
+</html>
