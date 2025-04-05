@@ -1,46 +1,28 @@
+<!-- select-academic-year.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Select Academic Year</title>
-    <link rel="stylesheet" href="style.css"> <!-- Reusing shared styles -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="header">
         <img src="assets/EK logo.png" alt="EuroKids Logo" class="logo">
         <h1>EUROKIDS PRE-SCHOOL MANAGEMENT SYSTEM</h1>
     </div>
-
     <div class="login-container">
         <div class="login-box">
-            <img src="assets/epms logo.png" alt="EuroKids Pre-School" class="login-logo">
-
-            <form id="yearForm">
-                <div class="dropdown-group">
-                    <label for="academicYear">Select Academic Year</label>
-                    <select id="academicYear">
-                        <option value="2025">Apr 25 - Mar 26</option>
-                    </select>
-                </div>
-
-                <button type="submit" class="login-btn" style="margin-top: 30px;">Continue</button>
-            </form>
+            <img src="assets/epms logo.png" alt="EPMS Logo" class="login-logo">
+            <br>
+            <label for="academicYear">Select Academic Year</label><br>
+            <select id="academicYear" class="input-group">
+                <option value="apr25-mar26">Apr 25 - Mar 26</option>
+                <option value="apr24-mar25">Apr 24 - Mar 25</option>
+            </select>
+            <button onclick="continueToDashboard()" class="login-btn">Continue</button>
         </div>
     </div>
-
-    <footer>
-        <p>2013 © EuroKids International Pvt. Ltd.</p>
-    </footer>
-
-    <script>
-        document.getElementById("yearForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            // You can store selected year if needed, then redirect
-            const selectedYear = document.getElementById("academicYear").value;
-            console.log("Selected Academic Year:", selectedYear);
-            window.location.href = "homepage.html";
-        });
-    </script>
+    <script src="Java Script files/academicYear Selection.js"></script>
 </body>
 </html>

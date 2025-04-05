@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Year 25-26</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-left">
+            <img src="assets/EK logo.png" alt="EuroKids Logo" class="logo">
+            <span class="system-name">EUROKIDS PRE-SCHOOL MANAGEMENT SYSTEM</span>
+        </div>
+        <div class="top-right">
+            <div class="user-dropdown">
+                <div class="user-btn">👤 sapna.deepak ▼
+                    <div class="dropdown-content">
+                        <a href="#">View Profile</a>
+                        <a href="#">Manage Users</a>
+                        <a href="#">Log Out</a>
+                    </div>
+                </div>
+            </div>
+            <div class="login-info">
+                <div id="last-login">Last Login:</div>
+                Paytm TID: <strong>10917920</strong>
+            </div>
+        </div>
+    </div>    
+
+    <!-- Marquee -->
+    <div class="marquee-container">
+        <marquee class="referral-banner" behavior="scroll" direction="left">
+            Refer your Friends & Family to be a part of the ever-growing EuroKids Network and win exciting Referral Benefits.
+        </marquee>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="dashboard-apr25-mar26.html">Dashboard</a>
+        <a href="enrollments.html">Enrollments</a>
+        <a href="operations.html">Operations</a>
+        <a href="statement.html">Statement Of Account</a>
+        <a href="fee.html">Fee Collection</a>
+        <a href="franchisee.html">Franchisee</a>
+        <a href="reports.html">Reports</a>
+        <a href="tools.html">Tools</a>
+        <a href="shortage.html">Shortage/Damage</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h2 class="dashboard-title">Welcome Partners to EPMS V2.0 - Your Own ERP Tool</h2>
+
+        <!-- Dashboard Tiles -->
+        <div class="tiles-container">
+            <div class="tile"><h3>Enquiries</h3> <p>89</p></div>
+            <div class="tile"><h3>LSQ Enquiries</h3> <p>1</p></div>
+            <div class="tile"><h3>Gross Admission</h3> <p>73</p></div>
+            <div class="tile"><h3>Transfer In</h3> <p>0</p></div>
+            <div class="tile"><h3>Transfer Out</h3> <p>0</p></div>
+            <div class="tile"><h3>Quit</h3> <p>2</p></div>
+            <div class="tile"><h3>Receivable</h3> <p>52,43,730</p></div>
+            <div class="tile"><h3>Collection</h3> <p>7,08,210</p></div>
+            <div class="tile"><h3>Payment Due</h3> <p>45,35,520</p></div>
+            <div class="tile"><h3>FCR Deposited</h3> <p>7,08,210</p></div>
+            <div class="tile"><h3>FCR Pending</h3> <p>0</p></div>
+            <div class="tile"><h3>Credit Note</h3> <p>7845</p></div>
+        </div>
+
+        <!-- Inventory Details -->
+        <div class="inventory-section">
+            <h3>Inventory Details</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Message</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Stock Details</td>
+                        <td><button class="btn-view">View</button></td>
+                    </tr>
+                    <tr>
+                        <td>Update Buffer Stock Option [Opted for Buffer: <strong>No</strong>]</td>
+                        <td><button class="btn-edit">Edit</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Dynamic last login time
+        document.getElementById("last-login").innerText = "Last Login: " + new Date().toLocaleString();
+    </script>
+
+</body>
+</html>
