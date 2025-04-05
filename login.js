@@ -11,8 +11,8 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     } else {
         errorMessage.textContent = "";
         forgotPasswordLink.style.display = "none";
-        // Redirect to homepage.html
-        window.location.href = "homepage.html";
+        // Redirect to AcademicYearSelection.html
+        window.location.href = "AcademicYearSelection.html";
     }
 });
 
