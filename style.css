@@ -7,7 +7,7 @@
 
 body {
     background-color: #2e2e2e;
-    color: #8f8f8f;
+    color: #fff;
     text-align: center;
 }
 
@@ -41,21 +41,18 @@ body {
     color: #333;
     padding: 20px;
     border-radius: 5px;
-    width: 250px;
-    height: 350px;
+    width: 300px;
     text-align: center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 .login-logo {
     width: 100%;
-    max-width: 250px;
+    max-width: 200px;
 }
 
 .input-group {
     margin: 10px 0;
-    width: 180px;
-    text-align: center;
 }
 
 .input-group input {
@@ -90,6 +87,7 @@ body {
     color: red;
     margin-top: 10px;
 }
+
 
 /* ➕ NEW STYLES FOR SELECT-YEAR DROPDOWN */
 .dropdown-group {
