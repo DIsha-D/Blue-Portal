@@ -50,7 +50,28 @@
         <a href="tools.html">Tools</a>
         <a href="shortage.html">Shortage/Damage</a>
     </div>
-
+    
+<!-- Franchisee Credit Limit Modal -->
+<div id="creditLimitModal" class="modal-overlay">
+    <div class="modal-box">
+      <div class="modal-header">
+        <span class="modal-title">Franchisee Credit Limit Exceeded</span>
+        <span class="modal-close" id="modalCloseBtn">&times;</span>
+      </div>
+      <div class="modal-body">
+        <p class="modal-outstanding">OutStanding : <strong>79344.03</strong></p>
+        <p class="modal-message">
+          The franchisee's outstanding invoice amount has exceeded the credit limit.
+          Please pay the outstanding invoice amount.
+        </p>
+      </div>
+      <div class="modal-actions">
+        <button id="paymentBtn">Payment</button>
+        <button id="cancelPopupBtn">Cancel</button>
+      </div>
+    </div>
+  </div>
+  
     <!-- Main Content -->
     <div class="main-content">
         <h2 class="dashboard-title">Welcome Partners to EPMS V2.0 - Your Own ERP Tool</h2>
@@ -98,7 +119,25 @@
     <script>
         // Dynamic last login time
         document.getElementById("last-login").innerText = "Last Login: " + new Date().toLocaleString();
-    </script>
-
+        
+    // Show modal only if flag is set
+    if (sessionStorage.getItem("showCreditLimitModal") === "true") {
+      document.getElementById("creditLimitModal").style.display = "block";
+      sessionStorage.removeItem("showCreditLimitModal");
+    }
+  
+    // Close modal on cancel or 'x' button
+    document.getElementById("cancelPopupBtn").onclick = function () {
+      document.getElementById("creditLimitModal").style.display = "none";
+    };
+    document.getElementById("modalCloseBtn").onclick = function () {
+      document.getElementById("creditLimitModal").style.display = "none";
+    };
+  
+    // Payment button (does nothing for now)
+    document.getElementById("paymentBtn").onclick = function () {
+      alert("Redirect to payment (not implemented)");
+    };
+  </script>
 </body>
 </html>

@@ -30,6 +30,11 @@
             <button onclick="continueToDashboard()" class="login-btn">Continue</button>
         </div>
     </div>
-    <script src="Java Script files/academicYear Selection.js"></script>
+    <script src="Java Script files/academicYear Selection.js">
+        function continueToDashboard() {
+          sessionStorage.setItem("showCreditLimitModal", "true");
+          window.location.href = "dashboard-apr25-mar26.html";
+        }
+      </script>
 </body>
 </html>
