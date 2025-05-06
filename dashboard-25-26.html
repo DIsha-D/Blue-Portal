@@ -5,101 +5,221 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academic Year 25-26</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="payment_modal_style.css">
 </head>
 <body>
 
     <!-- Top Bar -->
     <div class="top-bar">
         <div class="top-left">
+            <!-- Placeholder for the actual EuroKids logo image -->
             <img src="assets/EK logo.png" alt="EuroKids Logo" class="logo">
             <span class="system-name">EUROKIDS PRE-SCHOOL MANAGEMENT SYSTEM</span>
         </div>
         <div class="top-right">
-            <div class="user-dropdown">
-                <div class="user-btn">👤 sapna.deepak ▼
-                    <div class="dropdown-content">
-                        <a href="#">View Profile</a>
-                        <a href="#">Manage Users</a>
-                        <a href="#">Log Out</a>
-                    </div>
+            <!-- Date Selector Dropdown -->
+            <div class="dropdown-container">
+                <div class="dropdown-trigger date-trigger-style">
+                    📅 Apr 25 - Mar 26 ▼
+                </div>
+                <div class="dropdown-content">
+                    <a href="#">APR 25 - Mar 26</a>
+                    <a href="#">APR 24 - Mar 25</a>
+                    <a href="#">APR 23 - Mar 24</a>
+                </div>
+            </div>
+            <div class="dropdown-container">
+                <div class="dropdown-trigger user-trigger-style">
+                    👤 sapna.deepak ▼
+                </div>
+                <div class="dropdown-content">
+                    <a href="#">View Profile</a>
+                    <a href="#">Manage Users</a>
+                    <a href="#">Change Password</a>
+                    <a href="Login.html">Log Out</a>
                 </div>
             </div>
             <div class="login-info">
-                <div id="last-login">Last Login:</div>
+                <div id="last-login">Last Login: </div>
                 Paytm TID: <strong>10917920</strong>
             </div>
         </div>
-    </div>    
-
-    <!-- Marquee -->
-    <div class="marquee-container">
-        <marquee class="referral-banner" behavior="scroll" direction="left">
-            Refer your Friends & Family to be a part of the ever-growing EuroKids Network and win exciting Referral Benefits.
-        </marquee>
     </div>
+
+    <!-- Marquee/Banner -->
+        <div class="referral-banner">
+            <div class="marquee-container">
+                <marquee class="referral-banner" behavior="scroll" direction="left">
+                    Refer your Friends & Family to be a part of the ever - growing EuroKids Network and win exciting Referral Benefits.
+                </marquee>
+            </div>
+        </div>
 
     <!-- Sidebar -->
     <div class="sidebar">
-        <a href="dashboard-apr25-mar26.html">Dashboard</a>
-        <a href="enrollments.html">Enrollments</a>
-        <a href="operations.html">Operations</a>
-        <a href="statement.html">Statement Of Account</a>
-        <a href="fee.html">Fee Collection</a>
-        <a href="franchisee.html">Franchisee</a>
-        <a href="reports.html">Reports</a>
-        <a href="tools.html">Tools</a>
-        <a href="shortage.html">Shortage/Damage</a>
+        <a href="dashboard-25-26.html">Dashboard</a>
+        <a href="#enrollments">Enrollments</a>
+        <a href="#operations">Operations</a>
+        <a href="#statement">Statement Of Account</a>
+        <a href="#fee">Fee Collection</a>
+        <a href="#franchisee">Franchisee</a>
+        <a href="#reports">Reports</a>
+        <a href="#tools">Tools</a>
+        <a href="#shortage">Shortage/Damage</a>
     </div>
-    
-<!-- Franchisee Credit Limit Modal -->
-<div id="creditLimitModal" class="modal-overlay">
-    <div class="modal-box">
-      <div class="modal-header">
-        <span class="modal-title">Franchisee Credit Limit Exceeded</span>
-        <span class="modal-close" id="modalCloseBtn">&times;</span>
-      </div>
-      <div class="modal-body">
-        <p class="modal-outstanding">OutStanding : <strong>79344.03</strong></p>
-        <p class="modal-message">
-          The franchisee's outstanding invoice amount has exceeded the credit limit.
-          Please pay the outstanding invoice amount.
-        </p>
-      </div>
-      <div class="modal-actions">
-        <button id="paymentBtn">Payment</button>
-        <button id="cancelPopupBtn">Cancel</button>
-      </div>
-    </div>
-  </div>
-  
+
     <!-- Main Content -->
     <div class="main-content">
-        <h2 class="dashboard-title">Welcome Partners to EPMS V2.0 - Your Own ERP Tool</h2>
+        <h2 class="dashboard-title" style="text-align: left; font-weight: normal; font-size: 29px;">Welcome Partners to EPMS V2.0 - Your Own ERP Tool</h2>
 
-        <!-- Dashboard Tiles -->
-        <div class="tiles-container">
-            <div class="tile"><h3>Enquiries</h3> <p>89</p></div>
-            <div class="tile"><h3>LSQ Enquiries</h3> <p>1</p></div>
-            <div class="tile"><h3>Gross Admission</h3> <p>73</p></div>
-            <div class="tile"><h3>Transfer In</h3> <p>0</p></div>
-            <div class="tile"><h3>Transfer Out</h3> <p>0</p></div>
-            <div class="tile"><h3>Quit</h3> <p>2</p></div>
-           <!-- <div class="tile"><h3>Receivable</h3> <p>52,43,730</p></div>
-            <div class="tile"><h3>Collection</h3> <p>7,08,210</p></div>
-            <div class="tile"><h3>Payment Due</h3> <p>45,35,520</p></div>
-            <div class="tile"><h3>FCR Deposited</h3> <p>7,08,210</p></div>
-            <div class="tile"><h3>FCR Pending</h3> <p>0</p></div>
-            <div class="tile"><h3>Credit Note</h3> <p>7845</p></div> -->
+        <div class="tiles-container tile-row">
+            <div class="stat-tile">
+                <div class="tile-header"><span class="tile-icon">☰</span> Enquiries</div>
+                <div class="tile-number">91</div>
+                <div class="progress-container">
+                    <div class="progress-bar bg-green" style="width: 65%;"></div>
+                </div>
+                <div class="tile-dropdown-content">
+                    <a href="#">View</a>
+                    <a href="#">Download</a>
+                </div>
+            </div>
+            <div class="stat-tile">
+                <div class="tile-header"><span class="tile-icon">☰</span> LSQ Enquiries</div>
+                <div class="tile-number">1</div>
+                 <div class="progress-container">
+                    <div class="progress-bar bg-green" style="width: 30%;"></div>
+                </div>
+                <div class="tile-dropdown-content">
+                    <a href="#">View</a>
+                    <a href="#">Download</a>
+                </div>
+            </div>
+            <div class="stat-tile">
+                <div class="tile-header"><span class="tile-icon">☰</span> Gross Admission</div>
+                <div class="tile-number">76</div>
+                 <div class="progress-container">
+                    <div class="progress-bar bg-orange" style="width: 50%;"></div>
+                </div>
+                <div class="tile-dropdown-content">
+                    <a href="#">View</a>
+                    <a href="#">Download</a>
+                </div>
+            </div>
+            <div class="stat-tile">
+                <div class="tile-header"><span class="tile-icon">☰</span> Transfer In</div>
+                <div class="tile-number">0</div>
+                 <div class="progress-container">
+                    <div class="progress-bar bg-blue" style="width: 40%;"></div> {/* Adjusted width to be visible */}
+                </div>
+                <div class="tile-dropdown-content">
+                    <a href="#">View</a>
+                    <a href="#">Download</a>
+                </div>
+            </div>
+             <div class="stat-tile">
+                <div class="tile-header"><span class="tile-icon">☰</span> Transfer Out</div>
+                <div class="tile-number">0</div>
+                 <div class="progress-container">
+                    <div class="progress-bar bg-green" style="width: 20%;"></div> {/* Adjusted width to be visible */}
+                </div>
+                <div class="tile-dropdown-content">
+                    <a href="#">View</a>
+                    <a href="#">Download</a>
+                </div>
+            </div>
+            <div class="stat-tile">
+                <div class="tile-header"><span class="tile-icon">☰</span> Quit</div>
+                <div class="tile-number">2</div>
+                 <div class="progress-container">
+                    <div class="progress-bar bg-red" style="width: 40%;"></div>
+                </div>
+                <div class="tile-dropdown-content">
+                    <a href="#">View</a>
+                    <a href="#">Download</a>
+                </div>
+            </div>
         </div>
 
+         <!-- Dashboard Tiles - Row 2 - UPDATED 
+         <div class="tiles-container tile-row">
+             <div class="stat-tile">
+                 <div class="tile-header"><span class="tile-icon">💰</span> Receivable</div>
+                 <div class="tile-number">69,93,540</div>
+                 <div class="progress-container">
+                     <div class="progress-bar bg-blue" style="width: 80%;"></div>
+                 </div>
+                 <div class="tile-dropdown-content">
+                    <a href="#">View</a>
+                    <a href="#">Download</a>
+                </div>
+             </div>
+             <div class="stat-tile">
+                 <div class="tile-header"><span class="tile-icon">💰</span> Collection</div>
+                 <div class="tile-number">11,05,980</div>
+                  <div class="progress-container">
+                     <div class="progress-bar bg-red" style="width: 30%;"></div>
+                 </div>
+                 <div class="tile-dropdown-content">
+                    <a href="#">View</a>
+                    <a href="#">Download</a>
+                </div>
+             </div>
+             <div class="stat-tile">
+                 <div class="tile-header"><span class="tile-icon">💰</span> Payment Due</div>
+                 <div class="tile-number">58,87,560</div>
+                  <div class="progress-container">
+                     <div class="progress-bar bg-green" style="width: 75%;"></div>
+                 </div>
+                 <div class="tile-dropdown-content">
+                    <a href="#">View</a>
+                    <a href="#">Download</a>
+                </div>
+             </div>
+             <div class="stat-tile">
+                 <div class="tile-header"><span class="tile-icon">💰</span> FCR Deposited</div>
+                 <div class="tile-number">11,05,980</div>
+                  <div class="progress-container">
+                     <div class="progress-bar bg-orange" style="width: 50%;"></div>
+                 </div>
+                 <div class="tile-dropdown-content">
+                    <a href="#">View</a>
+                    <a href="#">Download</a>
+                </div>
+             </div>
+              <div class="stat-tile">
+                 <div class="tile-header"><span class="tile-icon">💰</span> FCR Pending</div>
+                 <div class="tile-number">0</div>
+                  <div class="progress-container">
+                     <div class="progress-bar bg-blue" style="width: 10%;"></div> {/* Adjusted width to be visible */}
+                 </div>
+                 <div class="tile-dropdown-content">
+                    <a href="#">View</a>
+                    <a href="#">Download</a>
+                </div>
+             </div>
+             <div class="stat-tile">
+                 <div class="tile-header"><span class="tile-icon">💰</span> Credit Note</div>
+                 <div class="tile-number">7845</div>
+                  <div class="progress-container">
+                     <div class="progress-bar bg-blue" style="width: 90%;"></div>
+                 </div>
+                 <div class="tile-dropdown-content">
+                    <a href="#">View</a>
+                    <a href="#">Download</a>
+                </div>
+             </div>
+         </div>-->
+
+       
         <!-- Inventory Details -->
         <div class="inventory-section">
-            <h3>Inventory Details</h3>
+            <h3><span class="icon">☰</span> Inventory Details</h3>
             <table>
                 <thead>
                     <tr>
                         <th>Message</th>
-                        <th>Action</th>
+                        <th>?</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -108,36 +228,42 @@
                         <td><button class="btn-view">View</button></td>
                     </tr>
                     <tr>
-                        <td>Update Buffer Stock Option [Opted for Buffer: <strong>No</strong>]</td>
+                        <td>Update Buffer Stock Option [ Opted for Buffer : <strong>No</strong>]</td>
                         <td><button class="btn-edit">Edit</button></td>
                     </tr>
                 </tbody>
             </table>
         </div>
-    </div>
 
+       <!-- MODAL HTML DIRECTLY INCLUDED HERE -->
+    <div id="franchiseeCreditLimitModal" class="modal-overlay"> <!-- Initially display:none via CSS -->
+        <div class="modal-box">
+         <div class="modal-header">
+           <span class="modal-title">Franchisee Credit Limit Exceeded</span>
+           <span class="modal-close" id="franchiseeModalCloseBtn">×</span>
+         </div>
+         <div class="modal-body">
+           <p class="modal-outstanding">OutStanding : <strong>263252.93</strong></p>
+           <p class="modal-message">
+             The franchisee's outstanding invoice amount has exceeded the credit limit. Please
+             pay the outstanding invoice amount.
+           </p>
+         </div>
+         <div class="modal-actions">
+           <button id="franchiseePaymentBtn" class="modal-btn payment-btn">Payment</button>
+           <button id="franchiseeCancelBtn" class="modal-btn cancel-btn">Cancel</button>
+         </div>
+       </div>
+   </div>
+   <!-- END OF MODAL HTML -->
+
+    
+    <script src="dashboard.js"></script>
     <script>
         // Dynamic last login time
         document.getElementById("last-login").innerText = "Last Login: " + new Date().toLocaleString();
-        
-    // Show modal only if flag is set
-    if (sessionStorage.getItem("showCreditLimitModal") === "true") {
-      document.getElementById("creditLimitModal").style.display = "block";
-      sessionStorage.removeItem("showCreditLimitModal");
-    }
-  
-    // Close modal on cancel or 'x' button
-    document.getElementById("cancelPopupBtn").onclick = function () {
-      document.getElementById("creditLimitModal").style.display = "none";
-    };
-    document.getElementById("modalCloseBtn").onclick = function () {
-      document.getElementById("creditLimitModal").style.display = "none";
-    };
-  
-    // Payment button (does nothing for now)
-    document.getElementById("paymentBtn").onclick = function () {
-      alert("Redirect to payment (not implemented)");
-    };
-  </script>
+    </script>
+    <script src="payment_modal_script.js"></script>
+
 </body>
 </html>
