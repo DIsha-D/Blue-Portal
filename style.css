@@ -218,7 +218,6 @@ body {
 
 /* Specific styles for the Date dropdown trigger */
 .date-trigger-style {
-    background-color: #555; /* Dark grey background as in image */
     font-size: 12px; /* Slightly smaller font for date */
 }
 
