@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admissions</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="Enrollments.css">
+    </head>
+    <body>
+        <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-left">
+            <!-- Placeholder for the actual EuroKids logo image -->
+            <img src="assets/EK logo.png" alt="EuroKids Logo" class="logo">
+            <span class="system-name">EUROKIDS PRE-SCHOOL MANAGEMENT SYSTEM</span>
+        </div>
+        <div class="top-right">
+            <!-- Date Selector Dropdown -->
+            <div class="dropdown-container">
+                <div class="dropdown-trigger date-trigger-style">
+                    📅 Apr 25 - Mar 26 ▼
+                </div>
+                <div class="dropdown-content">
+                    <a href="AcademicYearSelection.html">Change Academic Year</a>
+                </div>
+            </div>
+            <div class="dropdown-container">
+                <div class="dropdown-trigger user-trigger-style">
+                    👤 sapna.deepak ▼
+                </div>
+                <div class="dropdown-content">
+                    <a href="#">View Profile</a>
+                    <a href="#">Manage Users</a>
+                    <a href="#">Change Password</a>
+                    <a href="Login.html">Log Out</a>
+                </div>
+            </div>
+            <div class="login-info">
+                <div id="last-login">Last Login: </div>
+                Paytm TID: <strong>10917920</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- Marquee/Banner -->
+    <div class="referral-banner">
+        <div class="marquee-container">
+            <marquee class="referral-banner" behavior="scroll" direction="left">
+                Refer your Friends & Family to be a part of the ever - growing EuroKids Network and win exciting Referral Benefits.
+            </marquee>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="dashboard-25-26.html">Dashboard</a>
+        <a href="enrollments.html">Enrollments</a>
+        <a href="#operations">Operations</a>
+        <a href="#statement">Statement Of Account</a>
+        <a href="#fee">Fee Collection</a>
+        <a href="#franchisee">Franchisee</a>
+        <a href="#reports">Reports</a>
+        <a href="#tools">Tools</a>
+        <a href="#shortage">Shortage/Damage</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h2 class="dashboard-title" style="text-align: left; font-weight: normal; font-size: 30px;">Admission</h2>
+
+        <div class="tiles-container tile-row">
+            <div class="stat-tile">
+                <div class="tile-header"><span class="tile-icon">☰</span> Play group</div>
+                <div class="tile-number">24</div>
+                <div class="progress-container">
+                    <div class="progress-bar bg-green" style="width: 65%;"></div>
+                </div>
+            </div>
+            <div class="stat-tile">
+                <div class="tile-header"><span class="tile-icon">☰</span> Nursery</div>
+                <div class="tile-number">32</div>
+                 <div class="progress-container">
+                    <div class="progress-bar bg-orange" style="width: 30%;"></div>
+                </div>
+            </div>
+            <div class="stat-tile">
+                <div class="tile-header"><span class="tile-icon">☰</span> Euro Junior</div>
+                <div class="tile-number">25</div>
+                 <div class="progress-container">
+                    <div class="progress-bar bg-blue" style="width: 50%;"></div>
+                </div>
+            </div>
+            <div class="stat-tile">
+                <div class="tile-header"><span class="tile-icon">☰</span> Euro Senior</div>
+                <div class="tile-number">17</div>
+                 <div class="progress-container">
+                    <div class="progress-bar bg-red" style="width: 40%;"></div> {/* Adjusted width to be visible */}
+                </div>
+            </div>
+             <div class="stat-tile">
+                <div class="tile-header"><span class="tile-icon">☰</span> Total Admissions</div>
+                <div class="tile-number">100</div>
+                 <div class="progress-container">
+                    <div class="progress-bar bg-green" style="width: 20%;"></div> {/* Adjusted width to be visible */}
+                </div>
+            </div>
+        </div>
+
+        <div class="program-change-banner">
+            Program change can be done once in academic year for the student ( Academic year Apr 25 - Mar 26)
+        </div>
+
+        <div class="data-table-controls">
+            <div class="search-bar-container">
+                <span class="search-icon"></span> <!-- Placeholder for grid icon -->
+                <label for="tableSearch">Search:</label>
+                <input type="text" id="tableSearch" name="tableSearch">
+            </div>
+            <div class="show-entries-container">
+                <label for="showEntries">Show</label>
+                <select id="showEntries" name="showEntries">
+                    <option value="10" selected>10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+                entries
+            </div>
+        </div>
+        
+        <div class="data-table-wrapper">
+            <table class="custom-data-table">
+                <thead>
+                    <tr>
+                        <th>Admission Date<span class="sort-arrow up"></span></th>
+                        <th>UIN<span class="sort-arrow"></span></th>
+                        <th>Name<span class="sort-arrow"></span></th>
+                        <th>Father's Name<span class="sort-arrow"></span></th>
+                        <th>Program taken<span class="sort-arrow"></span></th>
+                        <th>Batch Time<span class="sort-arrow"></span></th>
+                        <th>Mobile 1<span class="sort-arrow"></span></th>
+                        <th>Mobile 2<span class="sort-arrow"></span></th>
+                        <th>Type<span class="sort-arrow"></span></th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01-04-2025</td>
+                        <td>EK/1173/0066/2526</td>
+                        <td>Saisha Prathap R</td>
+                        <td>Prathap R V</td>
+                        <td>Play Group</td>
+                        <td>Late Morning Shift</td>
+                        <td>9036644544</td>
+                        <td>9986478223</td>
+                        <td>offline</td>
+                        <td class="action-icons">
+                            <span>Edit</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01-04-2025</td>
+                        <td>EK/1173/0060/2526</td>
+                        <td>Darshil N S</td>
+                        <td>Sathish S</td>
+                        <td>Euro Junior</td>
+                        <td>Early Morning Shift</td>
+                        <td>9500454036</td>
+                        <td>9500454036</td>
+                        <td>offline</td>
+                        <td class="action-icons">
+                            <span>Edit</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01-04-2025</td>
+                        <td>EK/1173/0027/2526</td>
+                        <td>Architha N M</td>
+                        <td>Manjunath N S</td>
+                        <td>Play Group</td>
+                        <td>Late Morning Shift</td>
+                        <td>9483007777</td>
+                        <td>9113996027</td>
+                        <td>offline</td>
+                        <td class="action-icons">
+                            <span>Edit</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01-04-2025</td>
+                        <td>EK/1173/0026/2526</td>
+                        <td>Aanya S</td>
+                        <td>Srikanth B S</td>
+                        <td>Nursery</td>
+                        <td>Late Morning Shift</td>
+                        <td>9686963942</td>
+                        <td>9902296412</td>
+                        <td>offline</td>
+                        <td class="action-icons">
+                            <span>Edit</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01-04-2025</td>
+                        <td>EK/1173/0090/2526</td>
+                        <td>Ivory S</td>
+                        <td>Sangamesha</td>
+                        <td>Nursery</td>
+                        <td>Late Morning Shift</td>
+                        <td>9742572393</td>
+                        <td>7349265393</td>
+                        <td>offline</td>
+                        <td class="action-icons">
+                            <span>Edit</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01-04-2025</td>
+                        <td>EK/1173/0010/2526</td>
+                        <td>Pranam Vasista</td>
+                        <td>Prajwal B N</td>
+                        <td>Play Group</td>
+                        <td>Late Morning Shift</td>
+                        <td>9686507397</td>
+                        <td>9632324039</td>
+                        <td>offline</td>
+                        <td class="action-icons">
+                            <span>Edit</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01-04-2025</td>
+                        <td>EK/1173/0091/2526</td>
+                        <td>Arush M Annigeri</td>
+                        <td>Manoj Kumar</td>
+                        <td>Euro Junior</td>
+                        <td>Early Morning Shift</td>
+                        <td>8310956282</td>
+                        <td>9886335791</td>
+                        <td>offline</td>
+                        <td class="action-icons">
+                            <span>Edit</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01-04-2025</td>
+                        <td>EK/1173/0030/2526</td>
+                        <td>Shanthan</td>
+                        <td>Vinodh Kumar .S</td>
+                        <td>Euro Senior</td>
+                        <td>Early Morning Shift</td>
+                        <td>9620385270</td>
+                        <td>9618524468</td>
+                        <td>offline</td>
+                        <td class="action-icons">
+                            <span>Edit</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01-04-2025</td>
+                        <td>EK/1173/0058/2526</td>
+                        <td>Amaani</td>
+                        <td>Vishwajith H</td>
+                        <td>Euro Senior</td>
+                        <td>Early Morning Shift</td>
+                        <td>9742503310</td>
+                        <td>9620502943</td>
+                        <td>offline</td>
+                        <td class="action-icons">
+                            <span>Edit</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01-04-2025</td>
+                        <td>EK/1173/0092/2526</td>
+                        <td>Thashvin P</td>
+                        <td>M J Praveen</td>
+                        <td>Nursery</td>
+                        <td>Late Morning Shift</td>
+                        <td>8951437473</td>
+                        <td>7483130840</td>
+                        <td>offline</td>
+                        <td class="action-icons">
+                            <span>Edit</span>
+                        </td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+
+    <script src="dashboard.js"></script>
+    <script>
+        // Dynamic last login time
+        document.getElementById("last-login").innerText = "Last Login: " + new Date().toLocaleString();
+    </script>
+    
+    </body>
+</html>

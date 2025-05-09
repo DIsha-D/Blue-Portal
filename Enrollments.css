@@ -1,0 +1,236 @@
+/* --- Styles for Data Table Section --- */
+
+.program-change-banner {
+    background-color: #f8d7da; /* Light red background */
+    color: #721c24; /* Dark red text */
+    border: 1px solid #f5c6cb;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.data-table-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f7f7f7; /* Light grey background for controls bar */
+    border: 1px solid #ddd;
+    border-bottom: none; /* Border will be on the table header */
+    border-radius: 4px 4px 0 0; /* Rounded top corners */
+}
+
+.search-bar-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar-container label {
+    margin-right: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+.search-bar-container input[type="text"] {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.search-icon {
+    display: inline-block;
+    width: 16px; /* Adjust size */
+    height: 16px;
+    background-image: url('grid-icon.png'); /* Replace with your grid icon path or use Font Awesome */
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 10px;
+    opacity: 0.7;
+}
+
+.show-entries-container {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+}
+
+.show-entries-container label {
+    margin-right: 5px;
+}
+
+.show-entries-container select {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 0 5px;
+    font-size: 14px;
+    background-color: white;
+}
+
+.data-table-wrapper {
+    overflow-x: auto; /* For responsive tables if content is too wide */
+    border: 1px solid #ddd; /* Border around the table */
+    border-radius: 0 0 4px 4px; /* Rounded bottom corners */
+    background-color: #fff; /* White background for the table itself */
+}
+
+.custom-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px; /* Slightly smaller font for table content */
+    color: #333;
+}
+
+.custom-data-table th,
+.custom-data-table td {
+    border: 1px solid #e0e0e0; /* Lighter borders within the table */
+    padding: 10px 12px; /* Padding for cells */
+    text-align: left;
+    vertical-align: middle;
+}
+
+.custom-data-table thead th {
+    background-color: #f0f0f0; /* Light grey background for table header */
+    font-weight: bold;
+    color: #444;
+    position: relative; /* For positioning sort arrows */
+    white-space: nowrap; /* Prevent header text from wrapping */
+}
+
+.custom-data-table tbody tr:nth-child(even) {
+    /* background-color: #f9f9f9; */ /* Optional: Zebra striping, not prominent in image */
+}
+.custom-data-table tbody tr:hover {
+    background-color: #f1f1f1; /* Light hover effect on rows */
+}
+
+
+.custom-data-table td {
+    color: #555;
+}
+
+/* Sort Arrows Styling */
+.sort-arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 7px;
+    vertical-align: middle;
+    opacity: 0.4; /* Dimmed if not active */
+}
+
+.custom-data-table thead th:hover .sort-arrow {
+    opacity: 0.7; /* Slightly more visible on header hover */
+}
+
+/* Default sort arrow (both up and down, or a neutral one) */
+/* This example creates a basic up/down set, you might use icon fonts for better ones */
+.sort-arrow::before { /* Down arrow part */
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #666; /* Arrow color */
+    margin-bottom: 2px;
+}
+.sort-arrow::after { /* Up arrow part */
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid #666; /* Arrow color */
+}
+
+/* Active sort arrow (e.g., Admission Date is sorted up) */
+.sort-arrow.up::before {
+    border-top-color: transparent; /* Hide down part if sorted up */
+}
+.sort-arrow.up::after {
+    border-bottom-color: #222; /* Highlight up part */
+    opacity: 1;
+}
+.sort-arrow.up {
+    opacity: 1;
+}
+
+/* You would add a .down class similarly for downward sort */
+.sort-arrow.down::after {
+    border-bottom-color: transparent;
+}
+.sort-arrow.down::before {
+    border-top-color: #222;
+     opacity: 1;
+}
+.sort-arrow.down {
+    opacity: 1;
+}
+
+
+/* Action Icons Column */
+.action-icons {
+    text-align: center; /* Center the icons within the cell */
+    white-space: nowrap;
+    min-width: 120px; /* Ensure enough space for icons */
+}
+
+.action-icons span { /* If using span wrappers for icons */
+    display: inline-block; /* Or block if you want them stacked vertically easily */
+    margin: 0 2px; /* Spacing between icons */
+    cursor: pointer;
+    opacity: 0.7;
+}
+.action-icons span:hover {
+    opacity: 1;
+}
+.action-icons img { /* If using img for icons */
+    width: 16px; /* Adjust icon size */
+    height: 16px;
+    vertical-align: middle;
+}
+
+/* If icons are stacked as shown in the image within the cell: */
+.action-icons span {
+    display: block; /* Stack them vertically */
+    margin-bottom: 3px; /* Space between stacked icons */
+}
+.action-icons span:last-child {
+    margin-bottom: 0;
+}
+/* To get the two-column layout for icons, you might need a more complex structure or flexbox within the <td> */
+/* Simpler approach for now: just list them. For precise 2-column stack, nested divs or flex in td: */
+.action-icons {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    align-items: center;
+    justify-content: center; /* Center items */
+    gap: 3px; /* Gap between icons */
+}
+.action-icons span { /* Individual icon wrapper */
+    display: flex; /* Or inline-flex */
+    align-items: center;
+    justify-content: center;
+    width: 20px; /* Adjust as needed */
+    height: 20px; /* Adjust as needed */
+}
+
+
+/* Style the Name column for potential wrapping */
+.custom-data-table td:nth-child(3), /* Name column */
+.custom-data-table th:nth-child(3) {
+    /* min-width: 150px; */ /* Give it some minimum width if needed */
+}
+
+/* Style UIN column for fixed width and no wrap */
+.custom-data-table td:nth-child(2),
+.custom-data-table th:nth-child(2) {
+    white-space: nowrap;
+}
