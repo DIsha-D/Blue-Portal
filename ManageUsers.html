@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Staff Management</title>
+        <link rel="stylesheet" href="Css files/style.css">
+        <link rel="stylesheet" href="Css files/manage.css">
+    </head>
+    <body>
+        <!-- Top Bar -->
+    <div class="top-bar" style="height: 75px;">
+        <div class="top-left">
+            <!-- Placeholder for the actual EuroKids logo image -->
+            <img src="assets/EK logo.png" alt="EuroKids Logo" class="logo">
+            <span class="system-name">EUROKIDS PRE-SCHOOL MANAGEMENT SYSTEM</span>
+        </div>
+        <div class="top-right">
+            <!-- Date Selector Dropdown -->
+            <div class="dropdown-container">
+                <div class="dropdown-trigger date-trigger-style">
+                    📅 Apr 25 - Mar 26 ▼
+                </div>
+                <div class="dropdown-content">
+                    <a href="AcademicYearSelection.html">Change Academic Year</a>
+                </div>
+            </div>
+            <div class="dropdown-container">
+                <div class="dropdown-trigger user-trigger-style">
+                    👤 sapna.deepak ▼
+                </div>
+                <div class="dropdown-content">
+                    <a href="#">View Profile</a>
+                    <a href="ManageUsers.html">Manage Users</a>
+                    <a href="Login.html">Log Out</a>
+                </div>
+            </div>
+            <div class="login-info">
+                <div id="last-login">Last Login: </div>
+                Paytm TID: <strong>10917920</strong>
+            </div>
+        </div>
+    </div>
+
+        <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="dashboard-25-26.html">Dashboard</a>
+        <a href="enrollments.html">Enrollments</a>
+        <a href="#operations">Operations</a>
+        <a href="#statement">Statement Of Account</a>
+        <a href="#fee">Fee Collection</a>
+        <a href="#franchisee">Franchisee</a>
+        <a href="#reports">Reports</a>
+        <a href="#tools">Tools</a>
+        <a href="#shortage">Shortage/Damage</a>
+    </div>
+
+    <div class="main-content">
+        <div class="page-container">
+        <div class="header-section">
+            <h1 class="page-title">ManageUser</h1>
+            <button class="add-user-btn">
+                <!-- <i class="fas fa-plus"></i> Add -->
+                ➕ Add
+            </button>
+        </div>
+
+        <div class="controls-and-table-section">
+            <div class="table-controls-bar">
+                <div class="search-filter-container">
+                    <div class="search-container">
+                        <span class="search-icon-grid"></span> <!-- Grid icon -->
+                        <label for="userSearch">Search:</label>
+                        <input type="text" id="userSearch" name="userSearch">
+                    </div>
+                    <div class="status-filter-container">
+                        <select id="statusFilter" name="statusFilter">
+                            <option value="active" selected>Active</option>
+                            <option value="inactive">Inactive</option>
+                            <option value="all">All</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="show-entries-container">
+                    <label for="showEntries">Show</label>
+                    <select id="showEntries" name="showEntries">
+                        <option value="10" selected>10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                    entries
+                </div>
+            </div>
+
+            <div class="data-table-wrapper">
+                <table class="user-data-table">
+                    <thead>
+                        <tr>
+                            <th>User Name <span class="sort-arrow up"></span></th>
+                            <th>Franchisee <span class="sort-arrow"></span></th>
+                            <th>Email ID <span class="sort-arrow"></span></th>
+                            <th>User Role <span class="sort-arrow"></span></th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bhagya Shree</td>
+                            <td>EK-Bangalore-AGS Layout</td>
+                            <td>Bhagya2016.17@Gmail.Com</td>
+                            <td>Franchisee Coordinator</td>
+                            <td class="action-cell">
+                                <button class="action-icon-btn edit-icon" title="Edit">✎</button> <!-- Placeholder for Edit icon -->
+                                <button class="action-icon-btn search-icon-action" title="View">🔍</button> <!-- Placeholder for View/Search icon -->
+                                <button class="action-btn status-btn active">Active</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Geetha V</td>
+                            <td>EK-Bangalore-AGS Layout</td>
+                            <td>Geethav251986@Gmail.Com</td>
+                            <td>Teacher</td>
+                            <td class="action-cell">
+                                <button class="action-icon-btn edit-icon" title="Edit">✎</button>
+                                <button class="action-icon-btn search-icon-action" title="View">🔍</button>
+                                <button class="action-btn status-btn active">Active</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Kavitha santhosh</td>
+                            <td>EK-Bangalore-AGS Layout</td>
+                            <td>Kavithasurgimath@Gmail.Com</td>
+                            <td>Teacher</td>
+                            <td class="action-cell">
+                                <button class="action-icon-btn edit-icon" title="Edit">✎</button>
+                                <button class="action-icon-btn search-icon-action" title="View">🔍</button>
+                                <button class="action-btn status-btn active">Active</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Megha Pai</td>
+                            <td>EK-Bangalore-AGS Layout</td>
+                            <td>Meghakiniv@Gmail.Com</td>
+                            <td>Teacher</td>
+                            <td class="action-cell">
+                                <button class="action-icon-btn edit-icon" title="Edit">✎</button>
+                                <button class="action-icon-btn search-icon-action" title="View">🔍</button>
+                                <button class="action-btn status-btn active">Active</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pooja y v</td>
+                            <td>EK-Bangalore-AGS Layout</td>
+                            <td>Poojayv26@Gmail.Com</td>
+                            <td>Teacher</td>
+                            <td class="action-cell">
+                                <button class="action-icon-btn edit-icon" title="Edit">✎</button>
+                                <button class="action-icon-btn search-icon-action" title="View">🔍</button>
+                                <button class="action-btn status-btn active">Active</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Roopa R</td>
+                            <td>EK-Bangalore-AGS Layout</td>
+                            <td>Roopar10897@Gmail.Com</td>
+                            <td>Teacher</td>
+                            <td class="action-cell">
+                                <button class="action-icon-btn edit-icon" title="Edit">✎</button>
+                                <button class="action-icon-btn search-icon-action" title="View">🔍</button>
+                                <button class="action-btn status-btn active">Active</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>sapna.deepak</td>
+                            <td>EK-Bangalore-AGS Layout</td>
+                            <td>Sapnadeepak8@Gmail.Com</td>
+                            <td>Franchisee Administrators</td>
+                            <td class="action-cell">
+                                <!-- Only search icon visible for this user in the image -->
+                                <button class="action-icon-btn search-icon-action" title="View">🔍</button>
+                            </td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination-bar">
+                <button class="pagination-btn" disabled>First</button>
+                <button class="pagination-btn" disabled>« Previous</button>
+                <button class="pagination-btn page-number active">1</button>
+                <button class="pagination-btn page-number">2</button> <!-- Example -->
+                <button class="pagination-btn">Next »</button>
+                <button class="pagination-btn">Last</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <script src="Java Script files/manage_user_Script.js"></script>
+    <script>
+        // Dynamic last login time
+        document.getElementById("last-login").innerText = "Last Login: " + new Date().toLocaleString();
+    </script>
+    
+    </body>
+</html>
