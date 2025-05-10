@@ -553,3 +553,213 @@ body {
     color: #222; /* Make it slightly darker than regular cell text */
 }
 
+/* --- General Card Styling --- */
+.card-section {
+    background-color: #fff; /* White background for cards */
+    margin-bottom: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.card-header {
+    background-color: #f5f5f5; /* Light grey header background */
+    padding: 12px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    border-bottom: 1px solid #e0e0e0;
+    margin: 0;
+    border-radius: 5px 5px 0 0; /* Rounded top corners */
+    display: flex;
+    align-items: left;
+  /*  justify-content: space-between;*/   /* For icons on the right */
+}
+
+.card-header .header-icon {
+    margin-right: 8px;
+    font-size: 16px; /* Adjust if using icon font */
+    color: #555;
+    /* Add background-image for specific icons if using images */
+}
+
+.card-header .header-actions {
+    display: flex;
+    align-items: center;
+}
+.card-header .header-actions .action-icon {
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px; /* For icon fonts */
+    color: #666;
+    /* Replace with actual icons (Font Awesome, SVG, or image) */
+}
+.refresh-icon::before { content: '🔄'; } /* Example, replace with real icon */
+.close-icon-card::before { content: '✕'; } /* Example, replace with real icon */
+
+
+/* --- Fee Rate Card Accordion Styling --- */
+.fee-rate-card-section .accordion-container {
+    padding: 0; /* No padding around the accordion items themselves */
+}
+
+.accordion-item {
+    border-bottom: 1px solid #e7e7e7; /* Separator between items */
+}
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    background-color: #f9f9f9; /* Slightly off-white for accordion headers */
+    color: #444;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-weight: normal; /* As per image */
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.accordion-header:hover {
+    background-color: #f0f0f0;
+}
+
+.accordion-arrow {
+    margin-right: 10px;
+    font-size: 12px; /* Size of the arrow */
+    transition: transform 0.3s ease;
+    color: #777;
+}
+
+.accordion-item.active .accordion-arrow {
+    transform: rotate(90deg);
+}
+
+.accordion-content {
+    padding: 0; /* Content padding is handled by the table or inner elements */
+    display: none; /* Hidden by default */
+    background-color: white;
+    overflow: hidden;
+}
+
+/* Table inside accordion */
+.fee-details-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.fee-details-table th,
+.fee-details-table td {
+    border: 1px solid #eaeaea; /* Light borders for inner table */
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.fee-details-table thead th {
+    background-color: #f7f7f7; /* Header for inner table */
+    font-weight: bold;
+    color: #555;
+}
+.fee-details-table th:nth-child(2), /* Rate column */
+.fee-details-table td:nth-child(2),
+.fee-details-table th:nth-child(3), /* Royalty Percentage column */
+.fee-details-table td:nth-child(3) {
+    text-align: right;
+    min-width: 120px; /* Give some width to these columns */
+}
+
+
+.fee-details-table tbody tr {
+    background-color: #f0fff0; /* Light greenish background for rows */
+}
+.fee-details-table tbody tr:nth-child(odd) {
+    background-color: #e6f7e6; /* Slightly different green for odd rows if desired */
+}
+
+
+.fee-details-table tfoot td {
+    font-weight: bold;
+    background-color: #fff; /* White background for footer */
+    border-top: 2px solid #ccc; /* Thicker border above total */
+}
+.fee-details-table .total-label {
+    color: #333;
+    text-align: left;
+}
+.fee-details-table .total-amount {
+    color: #008000; /* Green color for total amount */
+    text-align: right;
+}
+
+/* --- Purchase Order Table Styling --- */
+.purchase-order-section .table-wrapper {
+    padding: 15px; /* Padding around the table within the card */
+    overflow-x: auto;
+}
+
+.purchase-order-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.purchase-order-table th,
+.purchase-order-table td {
+    border: 1px solid #e0e0e0;
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.purchase-order-table thead th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    color: #444;
+    white-space: nowrap;
+}
+.purchase-order-table th:nth-child(3), /* Value */
+.purchase-order-table td:nth-child(3),
+.purchase-order-table th:nth-child(4), /* Quantity */
+.purchase-order-table td:nth-child(4) {
+    text-align: right;
+}
+
+
+.status-delivered {
+    background-color: #d4edda; /* Light green background */
+    color: #155724; /* Dark green text */
+    padding: 3px 8px;
+    border-radius: 10px; /* Pill shape */
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.card-footer {
+    padding: 10px 15px;
+    text-align: right;
+    border-top: 1px solid #e0e0e0;
+    background-color: #f9f9f9;
+    border-radius: 0 0 5px 5px; /* Rounded bottom corners */
+}
+
+.all-purchase-order-btn {
+    background-color: #007bff; /* Blue button */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+.all-purchase-order-btn:hover {
+    background-color: #0056b3;
+}
