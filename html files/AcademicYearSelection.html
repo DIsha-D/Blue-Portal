@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Select Academic Year</title>
-    <link rel="stylesheet" href="Css files/style.css">
+    <link rel="stylesheet" href="/Css files/style.css">
 </head>
 <body>
     <div class="header">
-        <img src="assets/EK logo.png" alt="EuroKids Logo" class="logo">
+        <img src="/assets/EK logo.png" alt="EuroKids Logo" class="logo">
         <h1>EUROKIDS PRE-SCHOOL MANAGEMENT SYSTEM</h1>
     </div>
     <div class="login-container">
         <div class="login-box">
-            <img src="assets/epms logo.png" alt="EPMS Logo" class="login-logo">
+            <img src="/assets/epms logo.png" alt="EPMS Logo" class="login-logo">
             <br>
             <br>
             <b>
@@ -30,7 +30,7 @@
             <button onclick="continueToDashboard()" class="login-btn">Continue</button>
         </div>
     </div>
-    <script src="Java Script files/academicYear Selection.js">
+    <script src="../Java Script files/academicYear Selection.js">
         function continueToDashboard() {
           sessionStorage.setItem("showCreditLimitModal", "true");
           window.location.href = "dashboard-apr25-mar26.html";

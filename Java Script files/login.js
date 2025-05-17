@@ -12,7 +12,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
         errorMessage.textContent = "";
         forgotPasswordLink.style.display = "none";
         // Redirect to AcademicYearSelection.html
-        window.location.href = "AcademicYearSelection.html";
+        window.location.href = "html files/AcademicYearSelection.html";
     }
 });
 
