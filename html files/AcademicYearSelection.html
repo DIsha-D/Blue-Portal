@@ -20,6 +20,7 @@
             <label for="academicYear">Select Academic Year</label>
             </b> <br>
             <select id="academicYear" class="input-group">
+                <option value="apr26-mar27">Apr 26 - Mar 27</option>
                 <option value="apr25-mar26">Apr 25 - Mar 26</option>
                 <option value="apr24-mar25">Apr 24 - Mar 25</option>
                 <option value="apr24-mar25">Apr 23 - Mar 24</option>
@@ -33,6 +34,7 @@
     <script src="../Java Script files/academicYear Selection.js">
         function continueToDashboard() {
           sessionStorage.setItem("showCreditLimitModal", "true");
+          window.location.href = "dashboard-apr25-mar26.html";
           window.location.href = "dashboard-apr25-mar26.html";
         }
       </script>
